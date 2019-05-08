@@ -1,6 +1,9 @@
 import fs from 'fs';
 import dotenv from 'dotenv';
-import { Server, Mongo } from 'boardgame.io/server';
+import {
+  Server,
+  Mongo
+} from 'boardgame.io/server';
 
 import BigTwo from './src/Game/BigTwo/game';
 
@@ -13,7 +16,11 @@ try {
   }
 } catch (e) {}
 
-const { $PORT, MONGODB_URI, REACT_APP_REMOTE_SERVER_PORT } = process.env;
+const {
+  $PORT,
+  MONGODB_URI,
+  REACT_APP_REMOTE_SERVER_PORT
+} = process.env;
 const PORT = Number($PORT || REACT_APP_REMOTE_SERVER_PORT);
 
 const serverConifg = {
