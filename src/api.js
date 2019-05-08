@@ -7,7 +7,7 @@ const {
 
 export default function getAPI(gameName) {
   return axios.create({
-    baseURL: `${REACT_APP_REMOTE_SERVER}:8080/games/${gameName}/`
+    baseURL: `${REACT_APP_REMOTE_SERVER}:${Number(process.env.PORT) + 1}/games/${gameName}/`
 
     // baseURL: `https://king-vs-poo-server.herokuapp.com:46741/games/${gameName}/`
   });
